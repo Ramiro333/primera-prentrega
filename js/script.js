@@ -5,10 +5,6 @@ alert("bienvenido a Kurger Bing, a continuacion le presentamos el menu");
 // crear un menu con opciones
 function menu(){
     let eleccion = prompt("elija elementos del menu del 1 al 9 \n 1- hambruiguesa de ajo(10$) \n 2- hamrbuguesa de queso(10$) \n 3-papas de chocolate(5$) \n 4-refresco caliente(3$) \n 5-helado de agua(3$) \n 6-taparterias9000(15$) \n 7-combo ambicion(15$) \n 8-ensalada con azucar(8$) \n 9- finalizar compra");
-    if(eleccion < 1 || eleccion > 9 || isNaN(eleccion)){
-        alert("porfavor, ingrese numeros del 1 al 9");
-        menu();
-    }
     //asiganrle a cada opcion un numero
     switch(eleccion){
         case "1":
@@ -43,6 +39,9 @@ function menu(){
             }
             alert("El total de tu compra es de : " + total + "$");
             break
+        default:
+            alert("porfavor, ingrese numeros del 1 al 9");
+            menu();
     }
 }
 //llamar funcion
