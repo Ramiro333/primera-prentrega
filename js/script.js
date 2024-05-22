@@ -39,10 +39,17 @@ function menu(){
             }
             alert("El total de tu compra es de : " + total + "$");
             break
+        //manejar numeros fuera del rango
         default:
             alert("porfavor, ingrese numeros del 1 al 9");
-            menu();
+            // menu();
     }
+    
 }
 //llamar funcion
 menu();
+//asegurarse q el total sea siempre mayor a 10$
+while(total < 10 && total != 0){
+    alert("el minimo de compra es de 10$, porfavor, elija mas productos");
+    menu()
+}
